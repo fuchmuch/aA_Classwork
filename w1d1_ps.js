@@ -11,38 +11,38 @@
 // Predict what the following JavaScript expressions will evaluate to. Open your command
 // line and use the **Node REPL** to check if you are correct.
 
-4 + 4 / 2
-  (2 + -7) * 3
-101 % 10
-12 - 4 % 3
-true && false
-true && !(false || false)
-!true && !(false || false)
-'cat' + 'dog'
-2 + 'pizza'
-2.5 * 'fish'
-5 >= 11
-5 === 5.0
-7 !== 7.1
-5 + 5 > 8
-6 + 6 !== 12
-2 > 1 || false
-'true' === true
-10 % 2 === 0
-21 % 2 === 0
-21 % 2 !== 0
-21 % 2 === 1
-12 % 3 === 0
-9 % 3 === 0
-14 % 3 === 0
-'new york'[0]
-'new york'[1]
-'san francisco'[2 * 3]
-'bootcamp'[3].toUpperCase()
-'bootcamp'.indexOf('T')
-'bootcamp'.indexOf('camp')
-'bootcamp'.indexOf('o') > -1
-'science'.indexOf('x') === -1
+console.log(4 + 4 / 2); // 6
+console.log(2 + -7) * 3; // -5
+console.log(101 % 10);  // 1
+console.log(12 - 4 % 3); // 11
+console.log(true && false); //false
+console.log(true && !(false || false)); //true
+console.log(!true && !(false || false)); //false
+console.log('cat' + 'dog'); //catdog
+console.log(2 + 'pizza'); //2pizza
+console.log(2.5 * 'fish'); //NaN
+console.log(5 >= 11); //false
+console.log(5 === 5.0); //true
+console.log(7 !== 7.1); //true
+console.log(5 + 5 > 8); //true
+console.log(6 + 6 !== 12); //false
+console.log(2 > 1 || false); //true
+console.log('true' === true); //false
+console.log(10 % 2 === 0); //true
+console.log(21 % 2 === 0); //true
+console.log(21 % 2 !== 0); //true
+console.log(21 % 2 === 1); //true
+console.log(12 % 3 === 0); //true
+console.log(9 % 3 === 0); //true
+console.log(14 % 3 === 0); //false
+console.log('new york'[0]); //n
+console.log('new york'[1]); //e
+console.log('san francisco'[2 * 3]); //a
+console.log('bootcamp'[3].toUpperCase()); //T
+console.log('bootcamp'.indexOf('T')); // -1
+console.log('bootcamp'.indexOf('camp')); //4
+console.log('bootcamp'.indexOf('o') > -1); //true
+console.log('science'.indexOf('x') === -1); //true
 
 
 // ### Expression Evaluation Round 2
@@ -55,35 +55,35 @@ true && !(false || false)
 // 1
 var idx = 'abcde'.indexOf('D');
 idx = idx + 11;
-console.log(idx); // ?
+console.log(idx); // 10
 idx * 2;
-console.log(idx); // ?
+console.log(idx); // 10
 
 
 
 // 2
 var num = 33;
 var isEven = num % 2 === 0;
-console.log(isEven); // ?
-console.log(!isEven); // ?
+console.log(isEven); // false
+console.log(!isEven); // true
 
 
 
 // 3
 var str1 = 'marker';
 var num = 'whiteboard'.length - str1.length;
-console.log(num); // ?
+console.log(num); // 4
 var str2 = 'bootcamp';
-console.log(str2[num].toUpperCase()); // ?
-var char = str2[num].toLowerCase(); // ?
-console.log(char + '!'); // ?
+console.log(str2[num].toUpperCase()); // C
+var char = str2[num].toLowerCase(); // c!
+console.log(char + '!'); // p
 
 
 // 4
 var sentence = 'welcome to bootcamp prep';
 var lastChar = sentence[sentence.length - 1];
-console.log(lastChar); // ?
-console.log(sentence.indexOf(lastChar)); // ?
+console.log(lastChar); // p
+console.log(sentence.indexOf(lastChar)); // 18
 
 
 // ### Conditionals
@@ -102,7 +102,7 @@ if (age > 30) {
 } else {
   console.log('younger than 30');
 }
-
+//younger than 30
 
 
 // 6
@@ -115,7 +115,8 @@ if (str.length > 10) {
 if (str[0] === 'p') {
   console.log('starts with p');
 }
-
+//short string
+//starts with p
 
 
 // 7
@@ -126,7 +127,7 @@ if (num % 3 === 0) {
   console.log('divisible by 5');
 }
 
-
+//divisible by 3
 
 // 8
 var num = 15; // try different numbers here
@@ -136,7 +137,7 @@ if (num % 3 === 0) {
 if (num % 5 === 0) {
   console.log('divisible by 5');
 }
-
+//divisible by 5
 
 
 // 9
@@ -147,6 +148,8 @@ if (str[0] === str[0].toUpperCase()) {
 if (str[str.length - 1] === str[str.length - 1].toUpperCase()) {
   console.log('ends with a capital!');
 }
+//starts with a capital!
+//ends with a capital!
 
 
 
@@ -164,6 +167,8 @@ if (num % 2 === 0) {
 } else {
   console.log('odd');
 }
+//negative
+//even
 
 
 // ### Conditional Muscle Memory
@@ -181,6 +186,8 @@ if (num > 5) {
   console.log('if');
 }
 
+//if
+
 
 
 var num = 5; // feel free to change the value of this variable
@@ -190,7 +197,7 @@ if (num > 5) {
   console.log('else');
 }
 
-
+//else
 
 var num = 0; // feel free to change the value of this variable
 if (num < 0) {
@@ -201,6 +208,4 @@ if (num < 0) {
   console.log('else');
 }
 
-
-
-// homework 
+//else
