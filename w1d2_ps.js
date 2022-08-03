@@ -117,8 +117,6 @@ function isOdd(num) {
     }
     function isSubstring(searchString, subString) {
 
-
-
         return searchString.toLowerCase().includes(subString.toLowerCase()) //instead of looking for #, looking for existing
 
 
@@ -131,6 +129,11 @@ function isOdd(num) {
         //
         function echo(string) {
             // your code here...
+            let firstEcho = string.toUpperCase
+            let lastEcho = string.toLowerCase
+
+            return string = firstEcho + "..." + string + "..." + lastEcho;
+
         }
 
 
@@ -143,8 +146,13 @@ function isOdd(num) {
         // isEven(5); // => false
         function isEven(num) {
             // your code here...
+            return (num % 2 === 0);
         }
 
+        function isEven(num) {
+            return !isOdd(num);
+        }
+        isEven(100)
         // Write a function `averageOfFour(num1, num2, num3, num4)` that takes in four
         // numbers. The function should return the average of all of the numbers.
         //
