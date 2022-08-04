@@ -180,3 +180,92 @@ function fizzBuzz(max) {
 
 }
 fizzBuzz(20);
+
+
+// Define a function `isPrime(number)` that returns `true` if `number` is prime.
+// Otherwise, false. Assume `number` is a positive integer.
+//
+// Examples:
+//
+// isPrime(2); // => true
+// isPrime(10); // => false
+// isPrime(11); // => true
+// isPrime(9); // => false
+// isPrime(2017); // => true
+
+function isPrime(number) {
+
+    for (let i = 2; i < number; i++) {
+
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+
+}
+console.log(isPrime(2));
+console.log(isPrime(10));
+console.log(isPrime(11));
+console.log(isPrime(9));
+console.log(isPrime(2017));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function printBackwards(start, end) {
+    let i = end;
+    while (i >= start) {
+        console.log(i);
+        i--;
+    }
+}
+printBackwards(-5, 6)
+
+
+
+function func1(num) {
+    return num + 50;
+}
+
+function func2(num) {
+    return num + " bottles of beer on the wall";
+}
+
+function func3(num) {
+    var x = func1(num);
+    return func2(x);
+}
+
+var result = func3(5);
+console.log(result);
+var foo = function (name) {
+    return "Dance " + name + ", dance! "
+}
+
+var bar = function () {
+    var str = "";
+
+    for (var i = 0; i < 3; i += 1) {
+        str += foo("Anthony");
+        str += foo("Haseeb");
+        str += foo("Winnie");
+        str += " | ";
+    }
+
+    return str;
+}
+
+var result = bar();
+console.log(result);
