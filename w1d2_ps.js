@@ -110,11 +110,18 @@ function hello(str) {
 
 console.log(hello("child"));
 
+function hello(str) {
+    return `Hello${str}`
+}
 
+console.log(hello("child"));
+
+
+//string interpolation
 
 // Write a function `yell` that takes in a string and returns a "yelled" version
 // of that string.
-//
+
 // Examples:
 // yell("I want to go to the store"); // => "I WANT TO GO TO THE STORE!!!"
 // yell("Time to program"); // => "TIME TO PROGRAM!!!"
@@ -130,6 +137,13 @@ function yell(str) {
 console.log(yell("I want to go to the store"));
 console.log(yell("Time to program"));
 
+
+function yell(string) {
+    return string.toUpperCase()
+}
+
+
+console.log(yell("I want to go to the store"));
 
 // Write a function `whisper` that takes in a string and returns a "whispered" version
 // of that string.
@@ -153,6 +167,14 @@ function whisper(string) {
     return "..." + string.toLowerCase() + "..."
 }
 
+console.log(whisper("Hey Anthony"));
+console.log(whisper("YEA! that was fun"));
+
+
+function whisper(string) {
+
+    return `...${string.toLowerCase()}...`
+}
 console.log(whisper("Hey Anthony"));
 console.log(whisper("YEA! that was fun"));
 
@@ -194,6 +216,21 @@ function isSubstring(searchString, subString) {
 console.log(isSubstring("The cat went to the store", "he cat went"));
 console.log(isSubstring("Jump for joy", "joys"));
 
+function isSubstring(searchString, subString) {
+    let lowerSearch = searchString.toLowerCase();
+    let lowerSub = subString.toLowerCase();
+
+    if (lowerSearch.indexOf(lowerSub) !== -1) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(isSubstring("The cat went to the store", "he cat went"));
+console.log(isSubstring("Jump for joy", "joys"));
+
+
 
 // Write a function `echo` that takes in a string and returns that string "echo-ized".
 //
@@ -212,6 +249,17 @@ function echo(string) {
 }
 
 console.log(echo("Mom!"));
+
+//
+function echo(string) {
+
+    let upperWord = string.toUpperCase();
+    let lowerWord = string.toLowerCase()
+
+    return string = upperWord + "..." + string + "..." + lowerWord;
+
+}
+
 
 
 // Write a function `isEven` that takes in a number and returns `true` if the number
