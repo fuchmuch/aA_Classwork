@@ -9,7 +9,14 @@
 */
 
 function oddRange(end) {
-  // your code here...
+  let odds = [];
+
+  for (let i = 1; i <= end; i += 1) {
+    if (i % 2 === 1) {
+      odds.push(i);
+    }
+  }
+  return odds;
 }
 
 

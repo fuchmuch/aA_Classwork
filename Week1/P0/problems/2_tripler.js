@@ -9,12 +9,19 @@
 */
 
 function tripler(array) {
-  // your code here...
+  let tripled = [];
 
-  let multiple = array[i] * 3
+  for (let i = 0; i < array.length; i += 1) {
+    let num = array[i];
+    let tripleNum = num * 3;
+    tripled.push(tripleNum)
+  }
+
+  return tripled;
 
 }
-
+tripler([1, 2, 3]); // => [ 3, 6, 9 ]
+tripler([4, 1, 7]); // => [ 12, 3, 21 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = tripler;
