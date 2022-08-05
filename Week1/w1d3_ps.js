@@ -16,8 +16,7 @@
 // logBetween(4,6); // prints
 // 4
 // 5
-6
-
+//6
 function logBetween(lowNum, highNum) {
     for (let i = lowNum; i <= highNum; i++) {
         console.log(i);
@@ -51,11 +50,17 @@ logBetween(4, 6);
 // 10
 // 15
 
-// function logBetweenStepper(min, max, step) {
-//     for (let i = min; i <= max; i += step) {
-//         console.log(i)
-//     }
-// }
+function logBetweenStepper(min, max, step) {
+    for (let i = min; i <= max; i += step) {
+        console.log(i)
+    }
+}
+
+const logBetweenStepper = (min, max, step) => {
+    for (let i = min; i <= max; i += step) {
+        console.log(i)
+    }
+}
 
 // Write a function `printFives(max)` that prints out the multiples of 5 that are
 // less than max.
@@ -89,6 +94,16 @@ function printFives(max) {
 }
 printFives(20)
 
+const printFives = num => {
+    for (let i = 0; i < max; i++) {
+        if (i % 5 === 0) {
+            console.log(i)
+        }
+    }
+}
+printFives(20);
+//
+
 // Write a function `printReverse(min, max)` that print out all numbers from max
 // to min (exclusive), in reverse order.
 //
@@ -113,6 +128,14 @@ function printReverse(min, max) {
 
 printReverse(90, 94);
 
+const printReverse = (min, max) => {
+    for (let i = max - 1; i > min; i--) {
+        console.log(i)
+    }
+}
+printReverse(90, 94);
+
+
 // Write a function `sumNums(max)` that returns the sum of all positive numbers less
 // than or equal to max.
 //
@@ -133,6 +156,15 @@ function sumNums(max) {
 console.log(sumNums(365));
 
 
+function sumNums(num) {
+    let sum = 0;
+    for (let i = 1; i <= num; i++) {
+        sum += i;
+    }
+    return sum;
+}
+console.log(sumNums(365));
+
 // Define a function `isFactorOf(number, factor)` that returns `true` if `factor`
 // is a factor of `number`. `false` otherwise. A factor is a number that divides
 // another number without a leftover remainder.
@@ -146,6 +178,14 @@ function isFactorOf(number, factor) {
     } else {
         return false;
     }
+}
+console.log(isFactorOf(6, 2)); // => true
+console.log(isFactorOf(-6, 2)); // => true
+console.log(isFactorOf(5, 0)); // => false
+console.log(isFactorOf(22, 7)); // => false
+
+function isFactorOf(num, factor) {
+    return num % factor === 0;
 }
 console.log(isFactorOf(6, 2)); // => true
 console.log(isFactorOf(-6, 2)); // => true
@@ -181,6 +221,15 @@ function fizzBuzz(max) {
 }
 fizzBuzz(20);
 
+function fizzBuzz(num) {
+    for (let i = 0; i < num; i++) {
+        if ((i % 3 === 0 || i % 5 === 0)
+            && !(i % 3 === 0 && i % 5 === 0)) {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz(20);
 
 // Define a function `isPrime(number)` that returns `true` if `number` is prime.
 // Otherwise, false. Assume `number` is a positive integer.
@@ -210,6 +259,21 @@ console.log(isPrime(11));
 console.log(isPrime(9));
 console.log(isPrime(2017));
 
+function isPrime(num) {
+    if (num < 2) return false;
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+    return true;
+}
+console.log(isPrime(2));
+console.log(isPrime(10));
+console.log(isPrime(11));
+console.log(isPrime(9));
+console.log(isPrime(2017));
 
 
 
