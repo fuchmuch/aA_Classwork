@@ -85,5 +85,63 @@ function capWords(words) {
 
 
 function wordPeriods(sentence) {
+    let words = sentence.split('')
 
+    for (i = 0; i < words.length; i++) {
+        let word = words[i];
+        words[i] = word + "."
+    }
+    let newSent = words.join('')
+    return newSent
+}
+console.log(wordPeriods('hello world'))
+
+// Write a function `maxValue(array)` that returns the largest value in `array`.
+// Assume `array` is an array of numbers.
+//
+// Examples:
+//
+// maxValue([12, 6, 43, 2]); // => 43
+// maxValue([]); // => null
+// maxValue([-4, -10, 0.43]); // => 0.43
+
+function maxValue(array) {
+    let max = null; //only a person sets (no value)
+
+    for (let i = 0; i < array.length; i += 1) {// i= i+1 = i++
+        let num = array[i];
+        if (num > max || max === null) {
+            max = num;
+        }
+    }
+    return max;
+}
+
+console.log(maxValue([12, 6, 43, 2]));
+
+
+// Write a function `myIndexOf(array, target)` that takes in an array of
+// numbers and a target number as arguments. It should return the index value
+// of the target if it is present in the array or -1 if it is not present.
+//
+// CONSTRAINT: Do not use the indexOf method.
+//
+// Examples:
+//
+// myIndexOf([1,2,3,4],4) => 3
+// myIndexOf([5,6,7,8],2) => -1
+
+
+
+function myIndexOf(array, target) {
+
+    for (var i = 0; i < array.length; i++) {
+        var num = array[i];
+
+        if (num === target) {
+            return i;
+        }
+    }
+
+    return -1;
 }

@@ -4,7 +4,7 @@
 **
 ** Examples:
 **
-** tripler([1,2,3]); // => [ 3, 6, 9 ]
+** tripler([2,2,3]); // => [ 3, 6, 9 ]
 ** tripler([4, 1, 7]); // => [ 12, 3, 21 ]
 */
 
@@ -12,6 +12,11 @@ function tripler(array) {
   let tripled = [];
 
   for (let i = 0; i < array.length; i += 1) {
+    // tripled = [6, 6]
+    // i = 1
+    // num = 2
+    // tripledNum = 6
+
     let num = array[i];
     let tripleNum = num * 3;
     tripled.push(tripleNum)

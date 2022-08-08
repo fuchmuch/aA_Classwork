@@ -77,6 +77,8 @@ const logBetweenStepper = (min, max, step) => {
 // 15
 
 function printFives(max) {
+    // i += 1 === i = i + 1
+    // i += 5 === i = i + 5
     for (let i = 0; i < max; i += 5) {
         console.log(i)
     }
@@ -318,7 +320,7 @@ var foo = function (name) {
     return "Dance " + name + ", dance! "
 }
 
-var bar = function () {
+let bar = function () {
     var str = "";
 
     for (var i = 0; i < 3; i += 1) {
