@@ -10,8 +10,22 @@ firstLastCap('what is on the radio'); // =>'WhaT IS ON ThE RadiO'
 ***********************************************************************/
 
 function firstLastCap(sentence) {
+    let words = sentence.split('');
+    console.log(words);
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let newWord = word.toLowerCase();
+        let firstChar = newWord[0].toUpperCase();
+        let lastChar = newWord[newWord.length - 1].toUpperCase();
+        newWord = firstChar + newWord.slice(1, -1) + lastChar; //(1, -1) why i put -1?
+        newWords.push(newWord);
+        console.log(newWord);
+    }
+    let newSen = newWords.join('');
+    return newSen;
 
 }
-
+console.log(firstLastCap('hello BOOTCAMP PrEp'));
+console.log(firstLastCap('what is on the radio'));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = firstLastCap;

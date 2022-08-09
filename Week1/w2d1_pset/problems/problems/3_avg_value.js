@@ -20,8 +20,8 @@ function avgValue(array) {
     let avg = sum / array.length;
     return avg
 
-
 }
 
+console.log(avgValue([10, 20]));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = avgValue;
