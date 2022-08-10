@@ -19,8 +19,23 @@ isPrime(303212); // => false
 ***********************************************************************/
 
 function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
 
+  for (let n = 2; n < number; n++) {
+    if (number % n === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
+
+console.log(isPrime(2));
+console.log(isPrime(1693));
+console.log(isPrime(15));
+console.log(isPrime(303212));
 
 /***********************************************************************
 Using the `isPrime` function you made, write a function `firstNPrimes(n)`
@@ -34,8 +49,22 @@ firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
 function firstNPrimes(n) {
+  let primes = [];
 
+  while (primes.length < n) {//while the primes array is too small
+
+    if (isPrime(n)) {
+      primes.push(n);
+    }
+    n += 1; //is this same as i++ ?
+  }
+
+  return primes
 }
+
+console.log(firstNPrimes(0)); // => []
+console.log(firstNPrimes(1)); // => [2]
+console.log(firstNPrimes(10)); // => [2, 3, 5, 7]
 
 /***********************************************************************
 Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns

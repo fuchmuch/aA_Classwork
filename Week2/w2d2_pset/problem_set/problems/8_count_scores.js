@@ -35,7 +35,7 @@ function countScores(people) {
 
   for (let i = 0; i < people.length; i++) {
     let person = people[i];
-
+    console.log('current person:', person)
     if (count[person.name] === undefined) {
       count[person.name] = person.score;
     } else {
@@ -53,9 +53,17 @@ var ppl = [{ name: "Anthony", score: 10 },
 let countPpl = countScores(ppl);
 console.log(countPpl); //=> { Anthony: 2, Fred: 10, Winnie: 12 }
 
+let peeps = [
+  { name: "Anthony", score: 2 },
+  { name: "Winnie", score: 2 },
+  { name: "Fred", score: 2 },
+  { name: "Winnie", score: 2 },
+  { name: "Fred", score: 2 },
+  { name: "Anthony", score: 2 },
+  { name: "Winnie", score: 2 }
+];
 
-
-
+console.log(countScores(peeps));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;
