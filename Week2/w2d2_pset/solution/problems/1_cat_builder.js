@@ -11,41 +11,27 @@ var cat2 = catBuilder('Nyan', 'rainbow', ['poptarts']);
 cat2; // => { name: 'Nyan', color: 'rainbow', toys: [ 'poptarts' ] }
 ***********************************************************************/
 
+// solution 1
 function catBuilder(name, color, toys) {
-    let cat = {
-        name: name,
-        color: color,
-        toys: toys
-    }
-    return cat;
+  var cat = {
+    name: name,
+    color: color,
+    toys: toys
+  };
+
+  return cat;
 }
 
-
-let cat2 = catBuilder('Nyan', 'rainbow', ['poptarts']);
-console.log(cat2);
-
-///////dot notatioin////
-
+// solution 2
 function catBuilder(name, color, toys) {
-    let cat = {};
-    cat.name = name;
-    cat['color'] = color;
-    //cat. color = color  //why only color put a bracket? also is it ok to use color= cat['color']
-    cat.toys = toys;
+  var cat = {};
 
-    return cat;
+  cat.name = name;
+  cat.color = color;
+  cat.toys = toys;
+
+  return cat;
 }
 
-let cat1 = catBuilder('Whiskers', 'black', ['scratching-post', 'yarn']);
-console.log(cat1);
-
-let obj = { model: 'toyota' }
-
-console.log(obj.model)
-console.log(obj['model'])
-// let str = 'model';
-
-// console.log(obj[str]);
-// console.log(obj(str))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = catBuilder;

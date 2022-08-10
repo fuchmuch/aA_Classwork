@@ -29,23 +29,36 @@ var peeps = [
 countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
+//init an object
+//loop through the people array
+//init a person variable
+//init a name variable
+//init a score variable
+//check to see if the name is in my totalScores obj
+// if not then initialize the key value pair where the key is the name, and the value is the current score
 
 function countScores(people) {
-  let count = {}; //make an empty object
+  let totalScores = {}; //make an empty object
 
   for (let i = 0; i < people.length; i++) {
     let person = people[i];
-    console.log('current person:', person)
-    if (count[person.name] === undefined) {
-      count[person.name] = person.score;
+    let name = person.name;
+    let score = person.score;
+    if (totalScores[name] === undefined) {
+      totalScores[name] = score;
     } else {
-      count[person.name] += person.score;
+      totalScores[name] += score
+
     }
+    console.log(person)
+    console.log(name)
+    console.log(score)
+    console.log(totalScores)
   }
-  return count;
+  return totalScores
 }
 
-var ppl = [{ name: "Anthony", score: 10 },
+let ppl = [{ name: "Anthony", score: 10 },
 { name: "Fred", score: 10 },
 { name: "Anthony", score: -8 },
 { name: "Winnie", score: 12 }];

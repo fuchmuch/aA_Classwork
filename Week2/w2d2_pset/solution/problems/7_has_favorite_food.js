@@ -22,34 +22,19 @@ hasFavoriteFood(person, 'burgers'); // => true
 hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
 
-// I know that i have an object that is being passed in 
-//I also know that I have a food string that is being passed in
-//I know that the favorite foods value is an array
-//
-
+// solution 1
 function hasFavoriteFood(obj, food) {
-  console.log(food)
-  console.log(obj.favoriteFoods)
-  console.log(obj.favoriteFoods.includes(food))
-
-  return obj.favoriteFoods.includes(food)
+  if (obj.favoriteFoods.indexOf(food) > -1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-let dog = {
-  name: 'Fido',
-  favoriteFoods: ['chicken', 'sausage', 'scooby snacks']
+// solution 2
+function hasFavoriteFood(obj, food) {
+  return obj.favoriteFoods.indexOf(food) > -1;
 }
-
-console.log(hasFavoriteFood(dog, 'sausage')); // => true
-console.log(hasFavoriteFood(dog, 'cat food')); // => false
-
-let person = {
-  name: 'Al',
-  favoriteFoods: ['pizza', 'burgers', 'ramen']
-}
-
-console.log(hasFavoriteFood(person, 'burgers')); // => true
-console.log(hasFavoriteFood(person, 'fish')); // => false
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

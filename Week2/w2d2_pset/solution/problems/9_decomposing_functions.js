@@ -23,19 +23,14 @@ function isPrime(number) {
     return false;
   }
 
-  for (let n = 2; n < number; n++) {
-    if (number % n === 0) {
+  for (var i = 2; i < number; i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
 
   return true;
 }
-
-console.log(isPrime(2));
-console.log(isPrime(1693));
-console.log(isPrime(15));
-console.log(isPrime(303212));
 
 /***********************************************************************
 Using the `isPrime` function you made, write a function `firstNPrimes(n)`
@@ -49,38 +44,19 @@ firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
 function firstNPrimes(n) {
-  let primes = [];
-  let count = 2
-  while (primes.length < n) {//while the primes array is too small
+  var primes = [];
+  var num = 2;
 
-    // 
-    if (isPrime(count)) {
-      primes.push(count);
-    }
-    count += 1; //is this same as i++ ?
-  }
-
-  return primes
-}
-
-function firstNPrimes(n) {
-  let nPrimes = [];
-
-  for (let i = 2; nPrimes.length < 2; i++) {
-    if (isPrime(i)) {
-      nPrimes.push(i);
+  while(primes.length < n) {
+    if (isPrime(num)) {
+      primes.push(num);
     }
 
+    num += 1;
   }
-  return nPrimes;
+
+  return primes;
 }
-
-
-// i++ is the same as i += 1 which is the same as i = i + 1
-
-console.log(firstNPrimes(0)); // => []
-console.log(firstNPrimes(1)); // => [2]
-console.log(firstNPrimes(4)); // => [2, 3, 5, 7]
 
 /***********************************************************************
 Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns
@@ -94,20 +70,15 @@ sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
 function sumOfNPrimes(n) {
-  let primes = firstNPrimes(n);
-  let totalSum = 0;
+  var sum = 0;
+  var primes = firstNPrimes(n);
 
-  for (let i = 0; i < primes.length; i++) {
-    let primeNum = primes[i];
-    totalSum += primeNum;
-
+  for (var i = 0;  i < primes.length; i += 1) {
+    sum += primes[i];
   }
-  return totalSum
+
+  return sum;
 }
-
-console.log(sumOfNPrimes(4));
-
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = {
