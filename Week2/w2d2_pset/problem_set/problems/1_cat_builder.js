@@ -24,5 +24,18 @@ function catBuilder(name, color, toys) {
 let cat2 = catBuilder('Nyan', 'rainbow', ['poptarts']);
 console.log(cat2);
 
+///////dot notatioin////
+
+function catBuilder(name, color, toys) {
+    let cat = {};
+    cat.name = name;
+    cat['color'] = color;  //why only color put a bracket? also is it ok to use color= cat['color']
+    cat.toys = toys;
+
+    return cat;
+}
+
+let cat1 = catBuilder('Whiskers', 'black', ['scratching-post', 'yarn']);
+console.log(cat1);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = catBuilder;
