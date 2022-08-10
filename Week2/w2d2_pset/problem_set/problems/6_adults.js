@@ -28,6 +28,23 @@ function adults(people) {
   return names
 }
 
+
+
+///bracket notation
+function adults(people) {
+  let names = [];
+
+  for (let i = 0; i < people.length; i += 1) {
+    let person = people[i];
+    if (person.age >= 18) {
+      names.push(person.name);
+    }
+  }
+  return names;
+}
+
+
+
 let ppl = [
   { name: 'John', age: 20 },
   { name: 'Jim', age: 13 },
