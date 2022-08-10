@@ -78,8 +78,20 @@ sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
 function sumOfNPrimes(n) {
+  let primes = firstNPrimes(n);
+  let totalSum = 0;
 
+  for (let i = 0; i < primes.length; i++) {
+    let primeNum = primes[i];
+    totalSum += primeNum;
+
+  }
+  return totalSum
 }
+
+console.log(sumOfNPrimes(4));
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = {
