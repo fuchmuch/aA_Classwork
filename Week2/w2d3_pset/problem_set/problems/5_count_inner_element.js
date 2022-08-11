@@ -27,42 +27,67 @@ how many times each element in each sub array repeats.
 //I know that I need to use the same counting pattern 
 
 function countInnerElement(arr) {
-    let obj = {}; //need to populate the key of element and create key value pair
+    let obj = {};
 
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i])
         let innerArr = arr[i];
-
-        for (let j = 0; j < arr.length; j++) {
+        for (let j = 0; j < innerArr.length; j++) {
             console.log(innerArr[j])
             let ele = innerArr[j];
             if (obj[ele] === undefined) {
-                obj[ele] = 1 //single = is an assignment
-            } else { //tells key does exist
-                obj[ele] += 1 //count up, start to incrementing
+                obj[ele] = 1
+            } else {
+                obj[ele] += 1
             }
-
         }
-        console.log(obj)
-        return obj
     }
+
+    console.log(obj)
+    return obj;
 }
 
 
-var arr1 = [
-    [1, 2, 4, 5],
-    [2, 7, 4],
-    [1, 4, 5, 2, 7]
-]
-console.log(countInnerElement(arr1)); // => {1: 2, 2: 3, 4: 3, 5: 2, 7: 2}
 
-var arr2 = [
-    ['a', 'b', 'c', 'd'],
-    ['a', 'b'],
-    ['a', 'c', 'd', 'a']
-]
 
-console.log(countInnerElement(arr2)); // => {a: 4, b: 2, c: 2, d: 2}
+
+// function countInnerElement(arr) {
+//     let obj = {}; //need to populate the key of element and create key value pair
+
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i])
+//         let innerArr = arr[i];
+
+//         for (let j = 0; j < arr.length; j++) {
+//             console.log(innerArr[j])
+//             let ele = innerArr[j];
+//             if (obj[ele] === undefined) {
+//                 obj[ele] = 1 //single = is an assignment
+//             } else { //tells key does exist
+//                 obj[ele] += 1 //count up, start to incrementing
+//             }
+
+//         }
+//         console.log(obj)
+//         return obj
+//     }
+// }
+
+
+// var arr1 = [
+//     [1, 2, 4, 5],
+//     [2, 7, 4],
+//     [1, 4, 5, 2, 7]
+// ]
+// console.log(countInnerElement(arr1)); // => {1: 2, 2: 3, 4: 3, 5: 2, 7: 2}
+
+// var arr2 = [
+//     ['a', 'b', 'c', 'd'],
+//     ['a', 'b'],
+//     ['a', 'c', 'd', 'a']
+// ]
+
+// console.log(countInnerElement(arr2)); // => {a: 4, b: 2, c: 2, d: 2}
 
 
 

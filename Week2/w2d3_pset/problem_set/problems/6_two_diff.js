@@ -16,12 +16,25 @@ HINT: Account for negative difference too!
 //index 
 //
 function twoDiff(array) {
-    let diff = [];
-    array[i] - 1
+    let pairs = [];
+    for (let i = 0; i < array.length; i++) {
+        let ele1 = array[i];
+        for (let j = i + 1; j < array.length; j++) {
+            let ele2 = array[j]; // use absolute value 
+            if (Math.abs(ele1 - ele2) === 2) {
+                pairs.push([i, j]) // can we use as pairs.push([i][j])
+            }
 
+        }
 
+    }
+
+    return pairs;
 
 }
+
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = twoDiff;

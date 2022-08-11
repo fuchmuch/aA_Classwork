@@ -14,8 +14,24 @@ value in 'obj'.
 // valueCounter(pairs, 'Roman') // => 2
 ***********************************************************************/
 
-function valueCounter(obj, val){
-  
+//init an interger that will kepp count of the amount of times of a value appears in the object
+//init to 0;
+//use a for in loop to loop through the obj
+//but in for loop, key into the obj to the key == key into the obj with the key thats given from the for in loop
+//check to see if the value = the value being passed in
+//if ture, then increment the count
+
+function valueCounter(object, value) {
+    let count = 0;
+
+    for (let key in object) {
+        let val = object[key];
+        if (val === value) {
+            count++;
+        }
+    }
+
+    return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
